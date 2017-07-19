@@ -51,11 +51,16 @@ int main(int argc, char *argv[]) {
 
     fclose(f);
 
-    fprintf(fp,"gmt psxy %s -R0/%f/0/%f -JX7i/4i -Bx%f+l\"Frequency(Hz)\" -By%.1f+l\"Amplitude\" -BWSen+t\"%s\" -W0.8p,red>plot.ps\n", argv[3], high_f, peak, high_f/10., peak/10.,argv[1]);
+    //fprintf(fp,"gmt psxy %s -R0/%f/0/%f -JX7i/4i -Bx%f+l\"Frequency(Hz)\" -By%.1f+l\"Amplitude\" -BWSen+t\"%s\" -W0.8p,red>plot.ps\n", argv[3], high_f, peak, high_f/10., peak/10.,argv[1]);
+    fprintf(fp,"awk '{print $1,$2/%f}' %s >tmp.txt\n", peak, argv[3]);
+    fprintf(fp,"awk '{print \">\",\"\\n\",$1,0,\"\\n\",$1,$2}' tmp.txt >tmp1.txt\n");
+    fprintf(fp,"gmt psxy tmp.txt -R0/%f/0/1 -JX7i/4i -Bx%f+l\"Frequency(Hz)\" -By0.1+l\"Normalized Amplitude\" -BWSen+t\"%s\" -Sc0.05c -Gred -K >plot.ps\n", high_f, high_f/10., argv[1]);
+    fprintf(fp,"gmt psxy tmp1.txt -R -J -O -W0.5p>>plot.ps\n");
+    fprintf(fp,"gmt psconvert -Tg -A -P plot.ps\n");
     fprintf(fp,"ps2pdf plot.ps plot.pdf\n");
+    fprintf(fp,"rm tmp* gmt.*\n");
+    fprintf(fp,"evince plot.pdf\n");
     fclose(fp);
-    //printf("gmt psxy %s -R0/%f/0/%f -JX9i/6i -Bx%f+l\"Frequency(Hz)\" -By%f+l\"Amplitude\" -W1.2p,red>plot.ps\n", argv[1], 1./hd.delta, peak, 1./hd.delta/10., peak/10.);
-    system("sh plot.sh");
 
     fftw_destroy_plan(p);
     fftw_free(in); fftw_free(out); free(data);
