@@ -9,7 +9,7 @@ fft_out sacfile fre_high_limit output_result
 ```
 ***
 # Denpendencies
-- 
+- GMT (the Generic Mapping Tools), here version of 5.3.1
 ***
 # Contribution
 - Author: Xuping Feng 
