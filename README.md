@@ -1,7 +1,7 @@
 # FFT_SAC-format-file
 - To execute FFT of a SAC format file and virtualize the result;
 - Run on Linux or Mac OS platform.
-![Results](https://github.com/geophydog/FFT_SAC-format-file/blob/master/images/RESULTS.png)
+![Results](https://github.com/geophydog/FFT_SAC-format-file/blob/master/images/BOZ.BHZ.SAC_fftout.tif)
 ***
 
 # Usage
