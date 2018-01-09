@@ -11,8 +11,8 @@ fft_out sacfile fre_high_limit output_result
 ***
 # Denpendencies
 - Linux or Mac OS platform
-- GMT (the Generic Mapping Tools), here version of 5.3.1
-   [Download GMT](http://gmt.soest.hawaii.edu/projects/gmt/wiki/Download)
+- [GMT](http://gmt.soest.hawaii.edu/projects/gmt/wiki/Download) (the Generic Mapping Tools), here version of 5.3.1
+
 ***
 # Contribution
 - Author: Xuping Feng 
