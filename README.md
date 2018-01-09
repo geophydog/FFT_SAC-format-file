@@ -23,6 +23,10 @@ fft_out sacfile fre_low fre_high output_file
 ***
 
 # Example
+```
+fft_out BOZ.BHZ.SAC 0.01 0.5 out.txt
+```
+
  - :one: Raw data in time domain.
  
  ![Raw-data](https://github.com/geophydog/FFT_SAC-format-file/blob/master/images/BOZBHZ.SAC-raw.jpg)
