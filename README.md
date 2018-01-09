@@ -5,8 +5,14 @@
 
 # Usage
 ```
-fft_out sacfile fre_high_limit output_result    
+fft_out sacfile fre_low fre_high output_file
 ```
+
+| parameter | mean |
+| --------- | ---- |
+|  sacfile  | SAC format file name |
+|  fre_low  | low limitation of corner frequency |
+|  fre_high | high limitation of corner frequency |
 
 ***
 
