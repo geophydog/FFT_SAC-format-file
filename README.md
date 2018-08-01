@@ -1,5 +1,10 @@
 :hotel:[Return to Home Page](https://github.com/geophydog/geophydog.github.io)
 
+
+***
+
+# NOTICE!!! THIS PROGRAM COMES WITH NO WARRANTY, TO THE EXTEND PERMITED BY LAW!
+
 ***
 
 # FFT_SAC-format-file
